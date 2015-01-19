@@ -1,0 +1,64 @@
+WSGIPassAuthorization On
+WSGIDaemonProcess snap processes=2 threads=15 maximum-requests=10000
+WSGIPythonHome /var/www/DJANGO
+
+<VirtualHost *:8080>
+        ServerAdmin operations@dhinchak.in
+        ServerName dhinchak.in
+        ErrorLog /var/log/apache2/error.log
+        
+	Alias /sendy "/var/www/sendy"
+        <Directory "/var/www/sendy">
+                Options Indexes FollowSymLinks MultiViews
+                ## Options Indexes FollowSymLinks
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        # Possible values include: debug, info, notice, warn, error, crit,
+        # alert, emerg.
+        LogLevel warn
+
+        CustomLog /var/log/apache2/access.log combined
+
+        WSGIScriptAlias / /var/www/server/apache/django.wsgi
+
+        Alias /static/admin "/var/www/DJANGO/lib/python2.7/site-packages/django/contrib/admin/static/admin"
+        Alias /static/debug_toolbar "/var/www/DJANGO/lib/python2.7/site-packages/debug_toolbar/static/debug_toolbar"
+        Alias /static "/var/www/server/static"
+
+        <Directory "/var/www/server/static">
+                Options SymLinksIfOwnerMatch
+                AllowOverride None
+                Order deny,allow
+                Allow from all
+                <IfModule mod_expires.c>
+                    ExpiresActive On
+                    ExpiresDefault "access plus 30 days"
+                </IfModule>
+        </Directory>
+
+       <Directory "/var/www/DJANGO/lib/python2.7/site-packages/django/contrib/admin/static/admin">
+                Options SymLinksIfOwnerMatch
+                AllowOverride None
+                Order deny,allow
+                Allow from all
+                <IfModule mod_expires.c>
+                    ExpiresActive On
+                    ExpiresDefault "access plus 30 days"
+                </IfModule>
+        </Directory>
+
+       <Directory "/var/www/DJANGO/lib/python2.7/site-packages/debug_toolbar/static/debug_toolbar">
+                Options SymLinksIfOwnerMatch
+                AllowOverride None
+                Order deny,allow
+                Allow from all
+                <IfModule mod_expires.c>
+                    ExpiresActive On
+                    ExpiresDefault "access plus 30 days"
+                </IfModule>
+        </Directory>
+
+</VirtualHost>

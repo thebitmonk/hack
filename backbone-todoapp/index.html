@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Varun Jain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/master.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/screen.css"></link>	
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Trello</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#" onclick="addNewList()">Add List</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+    
+    <div id="stage">
+        <div id="main">
+        </div>
+    </div>    
+
+    
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+	<script id="listTemplate" type="text/template">
+	   <div class="tasks">
+                <div class="addTask" action="#" accept-charset=utf-8>
+                    <input class="task" placeholder="What needs to be done ?"/>
+                </div>
+                <div class="mytask">
+                </div>
+            </div>
+        </script>
+        <script id="taskTemplate" type="text/template">
+                <div class="todo" id="<%= task %>" data-id="<%= task %>" >
+                    <div><%= task %>
+                    </div>
+                    <div class="delete">×</div>
+                </div>
+	</script>
+
+	<script id="editTemplate" type="text/template">
+            <input class="edit" value="<%= task %>"/>
+    	</script>        
+
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/underscore-min.js"></script>
+	<script type="text/javascript" src="js/backbone-min.js"></script>
+	<script type="text/javascript" src="js/json2.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript">
+            window.onload = function(){
+                 $('#main').css('width', screen.width);
+            };
+        </script>
+  </body>
+</html>

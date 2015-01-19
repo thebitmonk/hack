@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Facebook Friend Selector</title>
+		<style>
+			body { font-family: sans-serif; color: #333; }
+			p { clear: left; }
+			.thesedays { float: left; text-decoration: none; margin: 0 10px 10px 0; }
+			.thesedays img { padding: 0; border: 0; height: 68px; width: 68px; }
+			#results { padding: 10px; border: 1px solid #333; font-family: monospace; }
+		</style>
+		<link rel="stylesheet" href="tdfriendselector.css" /><!-- Style source: tdfriendselector.scss -->
+	</head>
+	<body>
+		<div>FB Friend Selector - <b>The Bitmonk</b> </div>
+		<div id="fb-root"></div>
+		<ul>
+			<li>Status: <span id="login-status">Not logged in</span> | <a href="#" id="btnLogin">Login</a> | <a href="#" id="btnLogout">Log out</a></li>
+			<li><a href="#" id="btnSelect1">Select your friends</a> (You'll need to log in first)</li>
+		</ul>
+		<div id="results">
+			<p>ACTIVITY LOG</p>
+		</div>
+
+		<p>This friend selector can be used in your app by users to select friends from the friend list and to share on the FB wall of their friends. The same 
+		thing can be tweaked to send messages to the selected FB friends. The above code is based on the amazing work of <a href="https://github.com/thesedays/Facebook-friend-selector">These Days Facebook Friend Selector on GitHub</a></p>
+
+		<!-- Markup for These Days Friend Selector -->
+		<div id="TDFriendSelector">
+			<div class="TDFriendSelector_dialog">
+				<!--<a href="#" id="TDFriendSelector_buttonClose">x</a> -->
+                <!--
+                <div class="TDFriendSelector_header">
+                    <p>Make Wall Post</p>
+                </div>                
+                -->
+                <div class="wall">
+                    <textarea id="fb_post_field"></textarea>
+                </div>                    
+                <div class="TDFriendSelector_footer TDFriendSelector_clearfix">
+                    <a class="button" id="TDFriendSelector_buttonClose" >Close</a>
+                    <a class="button" id="fb_post" >Post</a>
+                </div>                    
+				<div class="TDFriendSelector_form">
+                    <!--
+					<div class="TDFriendSelector_header">
+						<p>Select your friends</p>
+					</div>
+                    -->
+					<div class="TDFriendSelector_content">
+						
+						<div class="TDFriendSelector_searchContainer TDFriendSelector_clearfix">
+							<div><input type="text" placeholder="Add friends" id="TDFriendSelector_searchField" /></div>
+                            <div class="TDFriendSelector_selectedCountContainer"><span class="TDFriendSelector_selectedCount"></span><span class="TDFriendSelector_selectedCountMax"></span></div>
+						</div>
+						<div class="TDFriendSelector_friendsContainer" style="display:none" ></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+		<script src="tdfriendselector.js"></script>
+		<script src="example.js"></script>
+
+	</body>
+</html>
+
