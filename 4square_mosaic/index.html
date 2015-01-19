@@ -1,0 +1,35 @@
+ <!-- Original web template, "webapp/index.html" -->
+<html>
+<head>
+  <title>Picture Full</title>
+  <meta content="width=320" name="viewport" />
+  <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+</head>
+<body>
+  <div class="hero-unit" >
+    <h1>4square Mosaic</h1>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <p>
+      <a class="btn btn-primary btn-large center" href="{{ authentication_url }}">
+      <img src="img/connect-white.png" /> 
+      </a>
+    </p>
+  </div>
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    client_id = "1SYD05LYXMEPB2MIRT0CV44DKBUC5RMJSTU3U3TZV34SORV0";
+    $.getJSON('/isAuthd',
+              function(config) {
+                if (config) {
+                  $('div.auth').hide();
+                  $('div.authed').show();
+                }
+              });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,339 @@
+
+@font-face
+{
+	font-family: Albatross;
+	src: url('../fonts/Albatross-Bold.ttf');
+}
+
+@font-face
+{
+	font-family: Raleway;
+	src: url('../fonts/raleway.ttf');
+}
+
+
+@font-face
+{
+	font-family: Oswald;
+	src: url('../fonts/Oswald-Light.otf');
+}
+
+
+body{
+	background-color: #DCD8CF; 
+	background-image: url('../images/bg.png');
+	background-repeat: repeat;
+	font-family: 'Open Sans', sans-serif;
+}
+
+h4{
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+
+}
+
+.banner-main{
+	background: url('http://placehold.it/4000x400');
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 20px;
+
+}
+
+
+.text-centered{
+	text-align: center;
+}
+
+.banner-main > h1{
+	text-align: center;
+}
+
+
+.banner-services span{
+	background-color: #E25D33;
+}
+
+.span_block{
+	display: block;
+	background: #E25D33;
+}
+
+
+
+.span_block h3{
+	color: #ffffff;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+}
+
+#footer{
+	height: 80px;
+	font-size: 10px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 70px;
+	background-color: #E25D33;
+	color: white;
+	display: block;
+}
+
+.project{
+	margin-top: 10px;
+	height: 300px;
+}
+
+.project img{
+	margin-bottom: 10px;
+}
+.project_description{
+	height: 100px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.project_description h4{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+#header{
+	position: fixed;
+	z-index: 100;
+	width: 100%;
+	height: 52px;
+	top: 0px;
+	background-color: #E25D33;
+}
+
+#header .menu-item{
+	margin-top: 15px;
+}
+#header h1{
+	font-family: Oswald;
+	display: inline;
+	position: relative;
+	line-height: 20px;
+	color: #ffffff;
+	font-size:  13px;
+	font-weight: bold;
+}
+
+#header h1:hover{
+
+	vertical-align: center;
+	cursor: pointer;
+
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+}
+
+#header a{
+	text-decoration: none;
+}
+#main{
+	position: relative;
+	top: 60px;
+}
+
+#services {
+	position: relative;
+	top: 120px;
+}
+
+#services-category{
+	position: relative;
+	top: 80px;
+}
+
+.services-category-item{
+	border: 8px solid #fff;
+box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+}
+
+#portfolio {
+	position: relative;
+	top: 120px;
+}
+
+#portfolio-category{
+	position: relative;
+	top: 80px;
+	max-height: 600px;
+	display: block;
+
+}
+
+#portfolio-left-container{
+	position: relative;
+	left: 0% !important;
+}
+
+#portfolio-left-container .columns{
+	padding: 0 5 0 0;
+	margin: 0 2 2 0;
+}
+#portfolio-right-container{
+	position: relative;
+}
+
+.six .portfolio-category-item{
+
+	
+	width: 100%;
+	height: 305px;
+	margin-bottom: 2%;
+}
+
+.nine .portfolio-category-item{
+	margin-bottom: 2%;
+}
+
+.portfolio-category .columns{
+	margin-top: 2%;
+	margin-bottom: 2%;
+
+}
+
+
+
+
+#recommendations{
+	position: relative;
+	top: 120px;
+}
+
+#recommendations-category{
+	position: relative;
+	top: 120px;
+}
+
+#footer{
+	position: relative;
+	top: 150px;
+	margin-top: 40px;
+}
+
+#footer .columns{
+	position: relative;
+	top: 40px;
+}
+h3{
+	
+	font-family: Oswald;
+	color: #ffffff;
+	font-size:  13px;
+	font-weight: bold;
+
+}
+
+.one-third{
+	width: 100%;
+	height: 30%;
+	margin-bottom: 3%;
+	position: relative;
+}
+
+.one-half{
+	width: 100%;
+	height: 50%;
+	position: relative;
+}
+
+#contactus{
+	position: relative;
+	top: 120px;
+}
+
+#contactus-category{
+	position: relative;
+	top: 120px;
+}
+
+#contact-form{
+	background-color: #cccccc;
+
+	height: 500px;
+}
+
+input.rounded{
+	
+	width:100% !important;
+	position: relative;
+	color: white;
+	line-height: 25pt;
+	font-size: 13px;
+	margin-top: 25px;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+    outline: 0;
+    display: block;
+    background-color: #777777;  
+}
+
+textarea{
+	margin-top: 25px;
+	width: 140%;
+	text-align: center;
+	height: 300px;
+	color: white;
+	font-size: 13px;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #777777;
+
+}
+
+textarea:focus{
+	text-align: left;
+}
+#letterpress h1 {
+        text-shadow: 0px 1px 1px #4d4d4d;
+        color: #222;
+        font: 80px 'LeagueGothicRegular';
+}
+
+.portfolio-category-item{
+	position: relative;  
+    overflow: hidden;  
+    z-index: 10;
+}
+
+ .caption {  
+    background-color: #777777;  
+    position: absolute;  
+    color: #fff;  
+    z-index: 100;  
+    width: 300px;
+    -webkit-transition: all 300ms ease-out;  
+    -moz-transition: all 300ms ease-out;  
+    -o-transition: all 300ms ease-out;  
+    -ms-transition: all 300ms ease-out;  
+    transition: all 300ms ease-out;  
+    left: 0;  
+}  
+
+  .simple-caption {  
+  	font-size: 10px;
+    width: 100%;   
+    display: block;  
+    bottom: -40px;  
+    line-height: 10px;  
+    padding-top: 8px;
+    text-align: center;  
+}  
+
+.nine .simple-caption{
+	bottom: -39px;
+}
+
+.portfolio-category-item:hover .simple-caption {  
+    -moz-transform: translateY(-100%);  
+    -o-transform: translateY(-100%);  
+    -webkit-transform: translateY(-100%);  
+    transform: translateY(-100%);  
+}  
